@@ -1,3 +1,3 @@
 # sftmc
 ---
-[i]By JohnnPM, wubwuber, Garrett
+<i>By JohnnPM, wubwuber, Garrett</i>
