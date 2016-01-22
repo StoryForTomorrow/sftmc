@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
-
 /**
  * @author Richmond Steele
  * @since 12/16/13 All rights Reserved Please read included LICENSE file

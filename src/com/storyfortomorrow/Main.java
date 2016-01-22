@@ -3,6 +3,8 @@
  */
 package com.storyfortomorrow;
 
+import java.util.logging.Logger;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,11 +21,14 @@ public class Main extends JavaPlugin
 {
 	public Main plugin;
 	private CommandFramework commandFramework;
+	
+	public static Logger log;
 
 	@Override
 	public void onLoad()
 	{
 		plugin = this;
+		log = plugin.getLogger();
 		commandFramework = new CommandFramework(plugin);
 	}
 
@@ -33,12 +38,14 @@ public class Main extends JavaPlugin
 		commandFramework.registerCommands();
 		commandFramework.registerHelp();
 		commandFramework.registerEvents(this);
+		
+		log.info("Enabled");
 	}
 
 	@Override
 	public void onDisable()
 	{
-		
+		log.info("Disabled");
 	}
 
 	@Override

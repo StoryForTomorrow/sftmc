@@ -20,7 +20,7 @@ import org.bukkit.event.Listener;
  */
 public class Chat implements Listener
 {
-	
+
 	/**
 	 * Broadcasts a message to all the players online.
 	 * 
@@ -34,8 +34,7 @@ public class Chat implements Listener
 		String msg = C.formatString(message, (Object[]) args);
 		for (Player p : Bukkit.getOnlinePlayers())
 			p.sendMessage(msg);
-		
-		
+
 	}
 
 	/**
