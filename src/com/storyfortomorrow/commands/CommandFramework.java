@@ -37,6 +37,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.help.GenericCommandHelpTopic;
 import org.bukkit.help.HelpTopic;
 import org.bukkit.help.HelpTopicComparator;
@@ -74,7 +75,16 @@ public class CommandFramework
 				Field field = SimplePluginManager.class.getDeclaredField("commandMap");
 				field.setAccessible(true);
 				map = (CommandMap) field.get(manager);
-			} catch (IllegalArgumentException | NoSuchFieldException | IllegalAccessException | SecurityException e)
+			} catch (IllegalArgumentException e)
+			{
+				e.printStackTrace();
+			} catch (NoSuchFieldException e)
+			{
+				e.printStackTrace();
+			} catch (IllegalAccessException e)
+			{
+				e.printStackTrace();
+			} catch (SecurityException e)
 			{
 				e.printStackTrace();
 			}
@@ -224,6 +234,42 @@ public class CommandFramework
 		}
 	}
 
+	public void registerEvents(Plugin plugin)
+	{
+		Class<?>[] classes = ClassEnumerator.getInstance().getClassesFromThisJar(plugin);
+		if (classes == null || classes.length == 0)
+		{
+			return;
+		}
+		for (Class<?> c : classes)
+		{
+			try
+			{
+				if (Listener.class.isAssignableFrom(c) && !c.isInterface() && !c.isEnum() && !c.isAnnotation())
+				{
+					if (JavaPlugin.class.isAssignableFrom(c))
+					{
+						if (plugin.getClass().equals(c))
+						{
+							Bukkit.getPluginManager().registerEvents((Listener) plugin, plugin);
+						}
+					} else
+					{
+						Bukkit.getPluginManager().registerEvents((Listener) c.newInstance(), plugin);
+					}
+				}
+			} catch (InstantiationException e)
+			{
+				plugin.getLogger().log(Level.INFO, c.getSimpleName() + " does not use the default constructor.");
+				e.printStackTrace();
+			} catch (IllegalAccessException e)
+			{
+				plugin.getLogger().log(Level.INFO, c.getSimpleName() + " does not use the default constructor.");
+				e.printStackTrace();
+			}
+		}
+	}
+
 	/**
 	 * Registers all the commands under the plugin's help
 	 */
@@ -310,13 +356,21 @@ public class CommandFramework
 
 	private void defaultCommand(CommandArgs args)
 	{
-		args.getSender().sendMessage(args.getLabel() + " is not handled! Oh noes!");
+		args.getSender().sendMessage(args.getLabel() + " is not handled!");
 	}
 
 	/**
 	 * Command Framework - Command <br>
 	 * The command annotation used to designate methods as commands. All methods
 	 * should have a single CommandArgs argument
+	 * <p>
+	 * Parameters
+	 * <li>command() - the name of the command</li>
+	 * <li>permission() - the commands permission ex. permission.me</li>
+	 * <li>noPerm() - the no permission message</li>
+	 * <li>aliases() - array of other names for the command</li>
+	 * <li>description - pretty straightforward</li>
+	 * <li>usage - the commands usage</li>
 	 * 
 	 * @author minnymin3
 	 */
@@ -355,7 +409,7 @@ public class CommandFramework
 		 * 
 		 * @return
 		 */
-		public String[]aliases() default
+		public String[] aliases() default
 		{};
 
 		/**
@@ -401,7 +455,7 @@ public class CommandFramework
 		 * 
 		 * @return
 		 */
-		String[]aliases() default
+		String[] aliases() default
 		{};
 
 	}
@@ -753,8 +807,6 @@ public class CommandFramework
 	 * CommandFramework - CommandListener <br>
 	 * For a class to use @Command annotation it must implement CommandListener
 	 * 
-	 * Added Credit Here Too :)
-	 * 
 	 * @author Not2EXceL
 	 */
 	public interface CommandListener
@@ -837,7 +889,6 @@ public class CommandFramework
 			return classes;
 		}
 
-		@SuppressWarnings("resource")
 		public Class<?>[] getClassesFromThisJar(Object object)
 		{
 			final List<Class<?>> classes = new ArrayList<Class<?>>();
