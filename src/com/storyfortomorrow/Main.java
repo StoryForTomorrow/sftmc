@@ -11,6 +11,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.storyfortomorrow.commands.CommandFramework;
 
+import master.of.the.tower.Manager;
+
 /**
  * Main class. Where it all happens.
  * 
@@ -19,7 +21,11 @@ import com.storyfortomorrow.commands.CommandFramework;
  */
 public class Main extends JavaPlugin
 {
-	public Main plugin;
+	public static Main plugin;
+	public static Main getPlugin()
+	{
+		return plugin;
+	}
 	private CommandFramework commandFramework;
 	
 	public static Logger log;
@@ -39,6 +45,8 @@ public class Main extends JavaPlugin
 		commandFramework.registerHelp();
 		commandFramework.registerEvents(this);
 		
+		Manager.init();
+		
 		log.info("Enabled");
 	}
 
@@ -53,4 +61,5 @@ public class Main extends JavaPlugin
 	{
 		return commandFramework.handleCommand(sender, label, cmd, args);
 	}
+	
 }

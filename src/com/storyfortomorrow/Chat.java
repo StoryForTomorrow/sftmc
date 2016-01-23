@@ -10,7 +10,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 /**
  * Anything chat related will be here.
@@ -20,6 +22,11 @@ import org.bukkit.event.Listener;
  */
 public class Chat implements Listener
 {
+	@EventHandler
+	public void onChat(AsyncPlayerChatEvent e)
+	{
+		e.setFormat("%s: %s");
+	}
 
 	/**
 	 * Broadcasts a message to all the players online.
@@ -29,12 +36,28 @@ public class Chat implements Listener
 	 * @param args
 	 *            any arguments (optional)
 	 */
-	public static void broadcast(String message, String... args)
+	public static void broadcast(String message, Object... args)
 	{
-		String msg = C.formatString(message, (Object[]) args);
+		String msg = C.formatString(message, args);
 		for (Player p : Bukkit.getOnlinePlayers())
 			p.sendMessage(msg);
+		Main.log.info(msg);
+	}
 
+	/**
+	 * Sends a message to a certain player
+	 * 
+	 * @param p
+	 *            player to send
+	 * @param message
+	 *            message to send
+	 * @param args
+	 *            anything else
+	 */
+	public static void send(Player p, String message, Object... args)
+	{
+		String msg = C.formatString(message, args);
+		p.sendMessage(msg);
 	}
 
 	/**
