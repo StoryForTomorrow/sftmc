@@ -3,14 +3,14 @@
 	"name_short":"Story for Tomorrow",
 	"name_lowercase":"sft",
 	"description":"",
+	"version":"0.1",
+	"stage":"Development",
+	"game_versions": ["1.7.10", "1.8", "1.8.1", "1.8.2", "1.8.3"],
+	"module_directory":"/modules",
 	"messages": {
 		"loading":"{0} v{1} is now loading.",
 		"enabled":"{0} v{1} has been enabled. [{2}ms]",
 		"disabled":"{0} v{1} has been disabled. [{2}min]",
 		"prefix":"[SFT]"
-	},
-	"version":"0.1",
-	"stage":"Development",
-	"game_versions": ["1.7.10", "1.8", "1.8.1", "1.8.2", "1.8.3"],
-	"module_directory":"/modules"
+	}
 }
