@@ -3,4 +3,5 @@
 In Development Minecraft Network.
 
 ---
-<i>By JohnnPM, wubwuber, Garrett</i>
+storyfortomorrow.com
+<i>By JohnnPM, wubwuber, Garrett</i> 2016
