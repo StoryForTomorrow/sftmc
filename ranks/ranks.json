@@ -1,32 +1,44 @@
 {
-	"default": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/default.json"
-	},
-	"star": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/star.json"
-	},
-	"starplus": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/starplus.json"
-	},
-	"helper": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/helper.json"
-	},
-	"moderator": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/moderator.json"
-	},
-	"manager": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/manager.json"
-	},
-	"owner": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/owner.json"
-	},
-	"youtuber": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/youtuber.json"
-	},
-	"streamer": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/streamer.json"
-	},
-	"mojang": {
-		"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/mojang.json"
-	}
+	"ranks": [
+		{
+			"id":"default",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/default.json"
+		},
+		{
+			"id":"star",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/star.json"
+		},
+		{
+			"id":"starplus",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/starplus.json"
+		},
+		{
+			"id":"helper",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/helper.json"
+		},
+		{
+			"id":"moderator",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/moderator.json"
+		},
+		{
+			"id":"manager",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/manager.json"
+		},
+		{
+			"id":"owner",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/owner.json"
+		},
+		{
+			"id":"youtuber",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/youtuber.json"
+		},
+		{
+			"id":"streamer",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/streamer.json"
+		},
+		{
+			"id":"mojang",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/ranks/mojang.json"
+		}
+	]
 }
