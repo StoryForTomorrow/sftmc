@@ -1,0 +1,8 @@
+{
+	"id":"streamer",
+	"name":"Streamer",
+	"tag":"[STREAMER]",
+	"staff":false,
+	"include":["default", "star", "starplus"],
+	"permissions": ["something.something", "lenny.face"]
+}

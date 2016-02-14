@@ -1,0 +1,8 @@
+{
+	"id":"manager",
+	"name":"Manager",
+	"tag":"[MANAGER]",
+	"staff":true,
+	"include":["helper"],
+	"permissions": ["something.something", "lenny.face"]
+}

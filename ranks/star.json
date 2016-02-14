@@ -1,0 +1,8 @@
+{
+	"id":"star",
+	"name":"Star",
+	"tag":"[STAR]",
+	"staff":false,
+	"include":["default"],
+	"permissions": ["something.something", "lenny.face"]
+}

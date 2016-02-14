@@ -1,0 +1,8 @@
+{
+	"id":"youtuber",
+	"name":"Youtuber",
+	"tag":"[YT]",
+	"staff":false,
+	"include":["default", "star", "starplus"],
+	"permissions": ["something.something", "lenny.face"]
+}

@@ -1,0 +1,32 @@
+{
+	"default": {
+		"link":""
+	}
+	"star": {
+		"link":""
+	}
+	"starplus": {
+		"link":""
+	}
+	"helper": {
+		"link":""
+	}
+	"moderator": {
+		"link":""
+	}
+	"manager": {
+		"link":""
+	}
+	"owner": {
+		"link":""
+	}
+	"youtuber": {
+		"link":""
+	}
+	"streamer": {
+		"link":""
+	}
+	"mojang": {
+		"link":""
+	}
+}

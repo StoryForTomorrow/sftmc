@@ -1,0 +1,8 @@
+{
+	"id":"starplus",
+	"name":"Star+",
+	"tag":"[STAR+]",
+	"staff":false,
+	"include":["default", "star"],
+	"permissions": ["something.something", "lenny.face"]
+}
