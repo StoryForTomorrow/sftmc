@@ -1,0 +1,8 @@
+{
+	"id":"moderator",
+	"name":"Moderator",
+	"tag":"[MOD]",
+	"staff":true,
+	"include":["helper"],
+	"permissions": ["something.something", "lenny.face"]
+}

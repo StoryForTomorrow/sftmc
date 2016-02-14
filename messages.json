@@ -1,0 +1,7 @@
+{
+	"loading":"{0} v{1} is now loading.",
+	"enabled":"{0} v{1} has been enabled. [{2}ms]",
+	"disabled":"{0} v{1} has been disabled. [{2}min]",
+	"prefix":"[SFT]",
+	"join":"{0} joined."
+}

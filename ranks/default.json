@@ -1,0 +1,7 @@
+{
+	"id":"default",
+	"name":"Default",
+	"tag":"",
+	"staff":false,
+	"permissions": ["something.something", "lenny.face"]
+}

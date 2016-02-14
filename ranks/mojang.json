@@ -1,0 +1,8 @@
+{
+	"id":"mojang",
+	"name":"Mojang",
+	"tag":"[MOJANG]",
+	"staff":false,
+	"include":["default", "star", "starplus"],
+	"permissions": ["something.something", "lenny.face"]
+}
