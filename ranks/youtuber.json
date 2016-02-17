@@ -2,6 +2,7 @@
 	"id":"youtuber",
 	"name":"Youtuber",
 	"tag":"[YT]",
+	"formattedtag":"<gold>[YT]",
 	"staff":false,
 	"include":["default", "star", "starplus"],
 	"permissions": ["something.something", "lenny.face"]

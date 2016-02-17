@@ -1,2 +1,44 @@
 {
+	"inventories": [
+		{
+			"id":"default",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/default.json"
+		},
+		{
+			"id":"star",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/star.json"
+		},
+		{
+			"id":"starplus",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/starplus.json"
+		},
+		{
+			"id":"helper",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/helper.json"
+		},
+		{
+			"id":"moderator",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/moderator.json"
+		},
+		{
+			"id":"manager",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/manager.json"
+		},
+		{
+			"id":"owner",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/owner.json"
+		},
+		{
+			"id":"youtuber",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/youtuber.json"
+		},
+		{
+			"id":"streamer",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/streamer.json"
+		},
+		{
+			"id":"mojang",
+			"url":"https://raw.githubusercontent.com/StoryForTomorrow/sftmc/master/lobby/inventory/mojang.json"
+		}
+	]
 }

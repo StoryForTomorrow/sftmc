@@ -2,6 +2,7 @@
 	"id":"default",
 	"name":"Default",
 	"tag":"",
+	"formattedtag":"",
 	"staff":false,
 	"permissions": ["something.something", "lenny.face"]
 }

@@ -2,6 +2,7 @@
 	"id":"starplus",
 	"name":"Star+",
 	"tag":"[STAR+]",
+	"formattedtag":"<gold>[STAR<aqua>+<gold>]",
 	"staff":false,
 	"include":["default", "star"],
 	"permissions": ["something.something", "lenny.face"]

@@ -2,6 +2,7 @@
 	"id":"moderator",
 	"name":"Moderator",
 	"tag":"[MOD]",
+	"formattedtag":"<dark_green>[MOD]",
 	"staff":true,
 	"include":["helper"],
 	"permissions": ["something.something", "lenny.face"]

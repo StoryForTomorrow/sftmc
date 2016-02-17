@@ -2,6 +2,7 @@
 	"id":"manager",
 	"name":"Manager",
 	"tag":"[MANAGER]",
+	"formattedtag":"<red>[MANAGER]",
 	"staff":true,
 	"include":["helper"],
 	"permissions": ["something.something", "lenny.face"]

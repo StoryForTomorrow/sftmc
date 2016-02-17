@@ -2,6 +2,7 @@
 	"id":"mojang",
 	"name":"Mojang",
 	"tag":"[MOJANG]",
+	"formattedtag":"<gold>[MOJANG]",
 	"staff":false,
 	"include":["default", "star", "starplus"],
 	"permissions": ["something.something", "lenny.face"]
