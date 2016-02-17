@@ -2,6 +2,7 @@
 	"id":"helper",
 	"name":"Helper",
 	"tag":"[HELPER]",
+	"formattedtag":"<blue>[HELPER]",
 	"staff":true,
 	"include":[],
 	"permissions":["something.something", "lenny.face"]

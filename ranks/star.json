@@ -2,6 +2,7 @@
 	"id":"star",
 	"name":"Star",
 	"tag":"[STAR]",
+	"formattedtag":"<gold>[STAR]",
 	"staff":false,
 	"include":["default"],
 	"permissions": ["something.something", "lenny.face"]

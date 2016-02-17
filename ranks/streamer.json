@@ -2,6 +2,7 @@
 	"id":"streamer",
 	"name":"Streamer",
 	"tag":"[STREAMER]",
+	"formattedtag":"<dark_purple>[STREAMER]",
 	"staff":false,
 	"include":["default", "star", "starplus"],
 	"permissions": ["something.something", "lenny.face"]

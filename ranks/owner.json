@@ -2,6 +2,7 @@
 	"id":"owner",
 	"name":"Owner",
 	"tag":"[MANAGER]",
+	"formattedtag":"<red>[MANAGER]",
 	"staff":true,
 	"include":["helper"],
 	"permissions": ["something.something", "lenny.face"]
